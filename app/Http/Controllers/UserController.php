@@ -52,7 +52,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('usuarios.show', ['user'=> User::findOrFail($id)]);
     }
 
     /**
@@ -90,6 +90,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = User::findOrFail($id);
+        $usuario->delete();
+        return redirect('/usuarios');
     }
 }
