@@ -1,1 +1,0 @@
-<h1>Hola, {{$user->name}} tu email es: {{$user->email}}</h1>
